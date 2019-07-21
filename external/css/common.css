@@ -1,0 +1,249 @@
+/*
+@名称: base
+@功能: 重设浏览器默认样式
+*/
+html {
+    color: #111;
+    font-size: 14px;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* IE bug fixed: th 不继承 text-align*/
+
+th {
+    text-align: inherit;
+}
+
+
+/* 去除默认边框 */
+
+fieldset,
+img,
+a img {
+    border: 0;
+}
+
+img {
+    display: inline;
+    vertical-align: middle;
+}
+
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+
+iframe {
+    display: block;
+}
+
+
+/* 去掉列表前的标识, li 会继承 */
+
+ol,
+ul {
+    list-style: none;
+    -webkit-margin: 0;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+ins,
+a {
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* 清理浮动 */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/*修复firefox button内文字不垂直居中*/
+
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"]>input[type="button"]::-moz-focus-inner {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -ms-tap-highlight-color: rgba(255, 0, 0, 0);
+    -ms-touch-callout: none;
+    -moz-tap-highlight-color: rgba(255, 0, 0, 0);
+    -moz-touch-callout: none;
+    tap-highlight-color: rgba(255, 0, 0, 0);
+    touch-callout: none;
+}
+
+
+/*placeholder颜色*/
+
+::-webkit-input-placeholder {
+    color: #999;
+}
+
+:-moz-placeholder {
+    color: #999;
+}
+
+::-moz-placeholder {
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+
+/* Css Reset End */
+
+/*2016.8.8 首页按钮*/
+
+.i-btn {
+    width: 216px;
+    height: 56px;
+    display: block;
+    border-radius: 999px;
+    line-height: 56px;
+    line-height: 66px\0;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.i-btn .i-btn-bg {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.i-btn .i-btn-wd {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+}
+.i-btnwhite {
+    border: 2px #fff solid;
+    color: #fff;
+}
+.i-btnwhite:hover {
+    background: #fff;
+    color: #1788e8;
+}
+.i-btnwhite:hover .i-btn-bg {
+    width: 100%;
+    background: #fff;
+}
+.i-btnblue {
+    border: 2px #1788e8 solid;
+    color: #1788e8;
+}
+.i-btnblue:hover {
+    background: #1788e8;
+    color: #fff;
+}
+.i-btnblue:hover .i-btn-bg {
+    width: 100%;
+    background: #1788e8;
+}
+.i-btnbluefull {
+    border: 2px #1788e8 solid;
+    color: #fff;
+    background: #1f8ce9;
+}
+.i-btnbluefull:hover {
+    border: 2px #117ad2 solid;
+    background: #117ad2;
+    color: #fff;
+}
+.i-btnbluefull:hover .i-btn-bg {
+    width: 100%;
+    background: #117ad2;
+}
+.disableBtn {
+    color: #acacac !important;
+    cursor: default !important;
+}

@@ -1,0 +1,84 @@
+.intro .logo {
+    font-size:0;
+}
+.intro .logo .icon-logo{
+    width:50%;
+    height:0.805rem;
+    display:inline-block;
+    margin:0;
+    vertical-align: top;
+}
+.intro .logo span{
+    display:inline-block;
+    font-size:0.32rem;
+    height:0.805rem;
+    line-height:0.805rem;
+    padding:0 0 0 0.12rem;
+}
+.intro p {
+    padding: 0.05rem 0.05rem 0.5rem 0.05rem;
+}
+.data h1 {
+    font-size: 0.265625rem;
+}
+.safe h1 {
+    font-size: 0.245625rem;
+}
+.safe p {
+    padding:0.3rem 0 0.22rem;
+}
+.quick .pic {
+    width: 75%;
+}
+.quick .words {
+    padding: 0.3rem 0 0rem;
+    margin-left:0;
+}
+.quick h1 {
+    font-size: 0.265625rem;
+    padding:0 0 0.15rem;
+}
+.quick p {
+    width: 90%;
+}
+.how .words h1 {
+    font-size: 0.265625rem;
+}
+
+.intro .logo {
+    width: 3.5rem;
+
+}
+.intro .logo .icon-logo{
+    width:28%;
+
+    margin:0.02rem 0 0;
+}
+.intro p {
+    padding: .05rem .05rem .5rem;
+}
+.footer-innerLink .footer-language, .footer-innerLink > a{
+    width:auto;
+    padding-right:0.2rem;
+}
+.footer-innerLink .footer-language, .footer-innerLink a,.footer-innerLink .footer-language span,.footer-service .service-label{
+    font-size:0.12rem;
+}
+.footer-innerLink a, .footer-service span ,.footer-language{
+    height: 0.5625rem;
+    line-height: 0.5625rem;
+}
+
+@media only screen and (min-aspect-ratio:23/32){
+    .quick .words{
+        padding:0.2rem 0 0.1rem;
+    }
+
+    .quick .pic{
+        width:70%;
+    }
+
+    .safe p{
+        padding:0.2rem 0 0.2rem;
+    }
+}

@@ -1,0 +1,69 @@
+.section .words {
+    width: 60%;
+}
+
+.data .words {
+    width:48%;
+    margin:-132px 0 0;
+}
+.data h1 {
+    font-size: 38px;
+}
+.safe h1 {
+    font-size: 38px;
+}
+
+.quick .words {
+    width:50%;
+    padding: 0 0 0 50px;
+    margin:-260px 0 0 -100px;
+}
+.quick h1 {
+    font-size: 38px;
+}
+.intro .logo{
+    width:640px;
+    height:72px;
+}
+.intro .logo .icon-logo{
+    width:220px;
+    height:72px;
+    margin-left:-10px;
+}
+.intro .logo span{
+    height:72px;
+    line-height: 65px;
+    font-size:58px;
+}
+.how .words{
+    width:100%;
+}
+.begin .words{
+    width:100%;
+}
+
+.footer ul.lang-list a i.ru {
+    background-position: -105px -32px;
+}
+
+@media all and (max-width:1367px) {
+    .section p{
+        font-size:20px;
+    }
+}
+@media all and (max-height:720px) {
+    .intro p {
+        font-size: 24px;
+    }
+    .safe h1 {
+        font-size: 38px;
+    }
+    .quick h1 {
+        font-size: 38px;
+    }
+}
+@media all and (min-width:1367px) {
+    .quick .words {
+        margin-top: -285px;
+    }
+}

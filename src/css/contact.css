@@ -1,0 +1,853 @@
+/*左侧头部*/
+.left-header > span {
+    display: inline-block;
+    width: 60px;
+    color: #535353;
+    font-size: 16px;
+    height: 68px;
+    line-height: 68px;
+    margin-left: 20px;
+}
+
+.left-header > .import-contact {
+    float: right;
+    width: 26px;
+    height: 26px;
+    background: url(../images/icons.gif) no-repeat 0 -756px;
+    margin: 21px 11px 0 0;
+}
+
+.left-header > .add-contact {
+    float: right;
+    width: 26px;
+    height: 26px;
+    background: url(../images/icons.gif) no-repeat 0 -721px;
+    margin: 21px 13px 0 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.left-header > .add-contact.active {
+    opacity: 0;
+    height: 0;
+}
+
+/*过滤区域*/
+.left-filter-wrap {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    z-index: 11;
+    border-bottom: #e4e3e4 1px solid;
+    background: -webkit-linear-gradient(top, #f4f3f4, #f3f3f3);
+    background: -moz-linear-gradient(top, #f4f3f4, #f3f3f3);
+    background: -o-linear-gradient(top, #f4f3f4, #f3f3f3);
+    background: linear-gradient(top, #f4f3f4, #f3f3f3);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f4f3f4, endcolorstr=#f3f3f3, gradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f4f3f4, endcolorstr=#f3f3f3, gradientType=0);
+}
+
+.left-filter-wrap.active .left-group {
+    /*display: none;*/
+    width: 0;
+    height: 0;
+}
+
+.left-filter-wrap.active .left-search {
+    width: calc(100% - 40px);
+}
+
+.left-filter-wrap.active .search-clear {
+    display: block;
+}
+
+.left-search {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    width: 74px;
+    height: 28px;
+    border-radius: 16px;
+    border: 0;
+    background: rgba(204, 204, 204, 0.35);
+    -webkit-transition: width 0.5s, border 0.5s;
+    -moz-transition: width 0.5s, border 0.5s;
+    -ms-transition: width 0.5s, border 0.5s;
+    transition: width 0.5s, border 0.5s;
+    overflow: hidden;
+}
+
+.search-wrap {
+    padding: 0 0 0 28px;
+    position: relative;
+}
+
+.left-filter-wrap.active .search-wrap {
+    padding: 0 28px 0 32px;
+}
+
+.search-wrap .search-exec {
+    width: 18px;
+    height: 18px;
+    background: url(../images/common.png) no-repeat 0 -468px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+.search-wrap .search-input {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    background: transparent;
+    float: left;
+    -webkit-transition: width 0.8s;
+    -moz-transition: width 0.8s;
+    -ms-transition: width 0.8s;
+    transition: width 0.8s;
+    position: relative;
+    background: url(../images/input-background.png) repeat\0;
+    outline: none;
+    border: none;
+}
+
+.search-wrap .search-clear {
+    width: 16px;
+    height: 16px;
+    background: url(../images/common.png) no-repeat -49px -498px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    display: none;
+}
+
+.search-wrap .input-default-tip {
+    height: 28px;
+    line-height: 28px;
+    position: absolute;
+    top: 0;
+    left: 33px;
+    font-size: 14px;
+    color: #878787;
+    pointer-events: none;
+    overflow: hidden;
+    text-overflow: none;
+    white-space: nowrap;
+    z-index: -1\0;
+}
+
+.left-search-result {
+    height: 20px;
+    line-height: 20px;
+    color: #535353;
+    font-size: 12px;
+    padding-left: 20px;
+    font-weight: 600;
+    background: -moz-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ddd),color-stop(100%,#e1e1e1));
+    background: -webkit-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: -o-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: -ms-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: linear-gradient(to bottom,#ddd 0,#e1e1e1 100%);
+    position: relative;
+    z-index: 11;
+}
+
+.left-search-result i {
+    color: #1d87e4;
+}
+
+/*下拉框*/
+.left-filter-wrap > .left-group {
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.list-header-left {
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+}
+
+.list-header-left i {
+    width: 10px;
+    height: 6px;
+    background: url(../images/common.png) no-repeat 0 -386px;
+    float: right;
+    margin: 8px 10px 0 7px;
+}
+
+.list-header-left .sel-input {
+    float: right;
+    outline: 0;
+    border: 0;
+    text-align: left;
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 14px;
+    color: #535353;
+}
+
+/*左侧下拉框组件*/
+
+.left-group-content {
+    position: relative;
+    height: 420px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.left-group-list {
+    height: calc(100% - 51px);
+    overflow: hidden;
+}
+
+.group-item {
+    font-size: 14px;
+    color: #666;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.group-item:hover {
+    background-color: #f2f2f2;
+}
+
+.edit-group-icon, .del-group-icon, .check-group-icon {
+    position: absolute;
+    top: 0;
+    padding: 0px 12px 0px 8px;
+    cursor: pointer;
+    height: 40px;
+    display: none;
+}
+
+.edit-group-icon {
+    right: 30px;
+    background: url(../images/icons.gif) no-repeat 0px -310px;
+}
+
+.del-group-icon {
+    right: 5px;
+    background: url(../images/icons.gif) no-repeat 0px -26px;
+}
+
+.check-group-icon {
+    right: 30px;
+    background: url(../images/icons.gif) no-repeat 3px -599px;
+}
+
+.group-item.selected .check-group-icon {
+    display: block;
+}
+
+.group-item.selected {
+    color: #000;
+    font-weight: 600;
+}
+
+.group-item.edit:hover .edit-group-icon, .group-item.edit:hover .del-group-icon {
+    display: block;
+}
+
+.group-item.edit.selected:hover .check-group-icon {
+    display: none;
+}
+
+.drop-btn-wrap {
+    height: 50px;
+    width: 180px;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    margin-left: -90px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.drop-btn-wrap .drop-btn {
+    display: inline-block;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+    color: #1d87e4;
+    cursor: pointer;
+}
+
+.drop-btn-wrap .new-group {
+    width: 100%;
+}
+
+/*右侧下拉列表*/
+
+.drop-btn-wrap .cancel-btn, .drop-btn-wrap .sure-btn {
+    width: 50%;
+}
+
+.right-group-list {
+    height: calc(100% - 51px);
+    overflow: hidden;
+}
+
+.right-group-item {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    color: #666;
+    cursor: pointer;
+    padding: 0 3px 0 39px;
+}
+
+.right-group-item .check-icon {
+    position: absolute;
+    width: 24px;
+    height: 40px;
+    top: 0;
+    left: 15px;
+}
+
+.right-group-item .check-icon.square {
+    background: url(../images/icons.gif) no-repeat 0 -243px;
+}
+
+.right-group-item .check-icon.square.checked {
+    background: url(../images/icons.gif) no-repeat 0 -346px;
+}
+
+.right-group-item .check-icon.square.unchecked {
+    background: url(../images/icons.gif) no-repeat 0 -277px;
+}
+
+.right-group-item .check-icon.circle.unchecked {
+    background: url(../images/checkbox.png) no-repeat -2px -27px;
+}
+
+.right-group-item .check-icon.circle.checked {
+    background: url(../images/checkbox.png) no-repeat -37px -27px;
+}
+
+.right-group-item:hover {
+    background-color: #f2f2f2;
+}
+
+.right-group-item .add-group-icon {
+    position: absolute;
+    width: 24px;
+    height: 40px;
+    left: 15px;
+    top: 0;
+    background: url(../images/icons.gif) no-repeat 0 -561px;
+}
+
+/*联系人列表*/
+.left-body {
+    height: calc(100% - 69px - 56px - 46px);
+}
+
+.left-body.isSearch {
+    height: calc(100% - 69px - 56px - 46px - 20px);
+}
+
+.sort-key {
+    height: 20px;
+    line-height: 20px;
+    color: #535353;
+    font-size: 12px;
+    padding-left: 20px;
+    font-weight: 600;
+    background: -moz-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ddd),color-stop(100%,#e1e1e1));
+    background: -webkit-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: -o-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: -ms-linear-gradient(top,#ddd 0,#e1e1e1 100%);
+    background: linear-gradient(to bottom,#ddd 0,#e1e1e1 100%);
+}
+
+.left-body li.item {
+    height: 60px;
+    line-height: 60px;
+    min-height: 60px;
+    background: #f6f6f6;
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    -ms-transition: background .2s ease;
+    transition: background .2s ease;
+}
+
+.contact-item-pic {
+    width: 40px;
+    height: 40px;
+    margin: 11px 20px;
+    border-radius: 30px;
+    float: left;
+}
+
+.left-body li.item .i-avata {
+    margin: 10px 19px 10px 2px;
+}
+
+.i-checkbox {
+    top: 12px;
+    right: 30px;
+}
+
+.contact-item-name {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #535353;
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.item.active .contact-item-name {
+    color: #fff;
+}
+
+.left-body .scrollContentWrap {
+    right: -33px!important;
+}
+
+/*右侧多选列表*/
+.right-header.select {
+    text-align: center;
+}
+
+.right-header .c-btn {
+    font-size: 16px;
+    float: right;
+    color: #32a5e7;
+    height: 68px;
+    line-height: 68px;
+    margin-right: 20px;
+}
+
+.right-header .edit-btn {
+    float: left;
+    margin-left: 20px;
+}
+
+.right-header .cancel-btn {
+    float: left;
+    margin-left: 20px;
+}
+
+.right-header .del-btn {
+    color: #ea5246;
+}
+
+.right-header .check-num {
+    text-align: center;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    height: 68px;
+    line-height: 68px;
+    font-size: 16px;
+    color: #999;
+}
+
+.batch-list {
+    padding: 0 42px;
+}
+
+.batch-list-item {
+    float: left;
+    text-align: center;
+    width: 98px;
+    height: 130px;
+    overflow: hidden;
+    margin: 25px 20px;
+}
+
+.batch-item-name {
+    max-width: 98px;
+    display: inline-block;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+}
+
+.batch-list-item .contactCheckImg {
+    width: 96px;
+    height: 96px;
+    line-height: 96px;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.right-body .scrollContentWrap {
+    right: -17px!important;
+}
+
+/*右侧编辑框*/
+
+.detail-head {
+    margin: 30px 0 26px;
+    position: relative;
+}
+
+.detail-head .i-avata {
+    padding: 0;
+    width: 78px;
+    height: 78px;
+    font-size: 18px;
+    line-height: 78px;
+    margin: 0 30px;
+}
+
+.detail-head p {
+    width: 480px;
+    height: 48px;
+    float: left;
+    position: relative;
+    -webkit-box-shadow: 0 1px 0 #ddd;
+    -moz-box-shadow: 0 1px 0 #ddd;
+    -ms-box-shadow: 0 1px 0 #ddd;
+    box-shadow: 0 1px 0 #ddd;
+    margin: 15px 0 0 0;
+}
+
+.detail-head .contact-name {
+    width: 400px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+    color: #262626;
+    margin: 12px 0 0;
+    background: transparent;
+    background: url(/images/input-background.png) repeat\0;
+}
+
+.detail-head .default-tip {
+    color: #999;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    pointer-events: none;
+    font-size: 18px;
+}
+
+.detail-head .star {
+    width: 20px;
+    height: 20px;
+    float: right;
+    background: url(../images/common.png) no-repeat 0 -228px;
+    margin: 14px 7px 0 0;
+}
+
+.detail-head .star.active {
+    background: url(../images/common.png) no-repeat -37px -228px;
+}
+
+.edit-mode .detail-head .star {
+    cursor: pointer;
+}
+
+.detail-list {
+    padding: 0 10px;
+    position: relative;
+}
+
+.detail-list.list {
+    margin-top: 32px;
+}
+
+.edit-mode .detail-list.list {
+    margin-top: 54px;
+}
+
+.detail-list.noline:before {
+    display: none;
+}
+
+.detail-list:before {
+    content: '';
+    position: absolute;
+    width: 390px;
+    height: 1px;
+    background: #ddd;
+    left: 139px;
+    /*bottom: -16px;*/
+    top: -16px;
+}
+
+.edit-mode .detail-list:before {
+    /*bottom: -27px;*/
+    top: -27px;
+    width: 68%;
+    margin-left: -20px;
+}
+
+.detail-item {
+    position: relative;
+}
+
+.edit-mode .detail-item {
+    margin: 28px 0;
+}
+
+.detail-item-name {
+    float: left;
+    position: relative;
+}
+
+.detail-item-name input {
+    background: 0 0;
+    height: 28px;
+    line-height: 28px;
+    outline: medium none;
+    text-align: right;
+    margin-right: 29px;
+    width: 100px;
+    color: #999;
+    font-size: 16px;
+    border: 0;
+}
+
+.detail-item-name i {
+    display: none;
+    width: 10px;
+    height: 30px;
+    background: url(../images/icons.gif) no-repeat 0 -116px;
+    margin: 0 0 0 2px;
+    position: absolute;
+    top: 4px;
+    right: 15px;
+}
+
+.detail-dropdown {
+    margin-left: 78px;
+}
+
+.edit-mode .edit-group-select:focus {
+    border-color: #e5e5e5!important;
+}
+
+.edit-mode .detail-item:hover .detail-item-name i {
+    display: block;
+}
+
+.edit-mode .detail-item-name input {
+    height: 36px;
+    line-height: 36px;
+}
+
+.detail-item-value {
+    float: left;
+    position: relative;
+}
+
+.detail-item-value .error-tip {
+    display: none;
+    font-size: 14px;
+    color: #f83030;
+    position: absolute;
+    left: 12px;
+    top: 38px;
+}
+
+.detail-item-value input {
+    background: 0 0;
+    height: 28px;
+    line-height: 28px;
+    outline: medium none;
+    text-align: left;
+    width: 390px;
+    color: #333;
+    font-size: 16px;
+    border: 0;
+}
+
+.group-choose {
+    background: 0 0;
+    outline: medium none;
+    width: 390px;
+    color: #333;
+    font-size: 16px;
+    border: 0;
+}
+
+.group-choose span {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+.edit-mode .detail-item-value .group-cover {
+    display: none;
+}
+
+.detail-item-value .group-cover {
+    position: absolute;
+    width: 390px;
+    height: 28px;
+    top: 0;
+    left: 0;
+}
+
+.edit-mode .group-choose span {
+    height: 36px;
+    line-height: 36px;
+}
+
+.edit-mode .detail-item-value .group-choose {
+    border-radius: 3px;
+    padding: 0 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+}
+
+.edit-mode .detail-item-value input {
+    height: 36px;
+    line-height: 36px;
+    border: 1px #e5e5e5 solid;
+    border-radius: 3px;
+    padding: 0 12px;
+    background-color: #f9f9f9;
+    -webkit-transition: border-color .3s ease;
+    -moz-transition: border-color .3s ease;
+    -ms-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+}
+
+.edit-mode .detail-item-value input:focus {
+    border-color: #167bfa
+}
+
+.detail-item-value .top-icon {
+    width: 20px;
+    height: 22px;
+    background: url(../images/icons.gif) no-repeat 0 -96px;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    right: -30px;
+    top: 50%;
+    margin-top: -11px;
+}
+
+.detail-item-value .del-icon {
+    height: 22px;
+    width: 25px;
+    background: url(../images/icons.gif) no-repeat 0 -648px;
+    position: absolute;
+    display: none;
+    right: -60px;
+    top: 50%;
+    margin-top: -11px;
+}
+
+.edit-mode .detail-item:hover .top-icon {
+    display: block;
+}
+
+.edit-mode .detail-item.first .top-icon {
+    display: none;
+}
+
+.edit-mode .detail-item.first .del-icon {
+    right: -32px;
+}
+
+.edit-mode .detail-item:hover .del-icon {
+    display: block;
+}
+
+.detail-item.last {
+    display: none;
+}
+
+.edit-mode .detail-item.last {
+    display: block;
+}
+
+.edit-mode .detail-item.last .top-icon, .edit-mode .detail-item.last .del-icon {
+    display: none;
+}
+
+.add-project-wrap {
+    padding: 20px 0 80px;
+    position: relative;
+    display: none;
+}
+
+.add-project-wrap .add-project {
+    position: absolute;
+    width: 98px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    color: #387aff;
+    border: 1px solid #387aff;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    left: 74px;
+    top: 10px;
+}
+
+.add-project-wrap .add-project:hover {
+    background: #387aff;
+    color: #fff;
+}
+
+.edit-mode .add-project-wrap {
+    display: block;
+}
+
+@media all and (max-width: 1200px) {
+    .contact-item-name {
+        width: 160px;
+    }
+    .left-body li.item {
+        padding-left: 10px
+    }
+    .batch-list {
+        padding: 0 30px;
+    }
+    .left-filter-wrap .left-search {
+        left: 10px;
+    }
+    .left-filter-wrap.active .left-search {
+        width: calc(100% - 20px);
+    }
+}
+
+input {
+    outline: none;
+    border: 0;
+}

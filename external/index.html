@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="renderer" content="webkit"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="Cache-Control"content="max-age=14400"/>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <meta name="description" content="<%= htmlWebpackPlugin.options.desc %>" />
+	    <meta name="keywords" content="<%= htmlWebpackPlugin.options.keyword %>" />
+        <link rel="dns-prefetch" href="//tongji-res.meizu.com">
+        <link rel="apple-touch-icon" href="/images/flymelogo.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/flymelogo72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/flymelogo114.png"/>
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/flymelogo144.png"/>
+        <link href="/css/iconfont.css" type="text/css" rel="Stylesheet"/>
+    </head>
+    <body>
+
+        <script>
+        var oversea = <%=htmlWebpackPlugin.options.oversea%>;
+        var searchArray = window.location.search.substring(1).split('&');
+        var language = <% if(htmlWebpackPlugin.options.oversea){ %> 'en_US' <% }else{ %> 'zh_CN' <% } %>;
+        searchArray.forEach(function(value, index) {
+            var kvArray = value.split('=');
+            if(kvArray[0] == 'language'){
+                language = kvArray[1];
+                return false;
+            }
+        });
+        document.write('<script src="/js/language/config.js"><\/script>');
+        document.write('<script src="/js/language/'+language+'.js"><\/script>');
+
+        if(language.indexOf('en') >= 0){
+            document.write('<link href="/css/intro_en.css" rel="stylesheet" type="text/css" />');
+        }
+        var ismobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|wOSBrowser|BrowserNG|WebOS)/i);
+        if(ismobile) {
+            document.write('<link href="/css/intro_m.css" rel="stylesheet" type="text/css" />');
+            if(language.indexOf('en') >= 0){
+                document.write('<link href="/css/intro_m_en.css" rel="stylesheet" type="text/css" />');
+            }
+        }
+        </script>
+
+        <div class="container opacity0 transall">
+            <div class="wrapper">
+                <div id="fullpage" class="fullpage">
+                    <div class="section intro" data-anchor="intro">
+                        <div class="header fp-auto-height">
+                            <div class="content">
+                                <a class="logoicon" href="http://www.flyme.cn/"></a>
+                                <ul>
+                                <script class="template" type="text/template">
+                                    {{index.head.forEach(function(name){ }}
+                                      <li><a {{if(name.v.indexOf('cloud') >= 0){ }} class="active" {{ }else{ }} target="_blank" {{ } }} href="{{=name.v}}">{{=name.k}}</a></li>
+                                    {{ }) }}
+                                </script>
+                                </ul>
+                                <a class="menu" href="javascript:void(0);">
+                                    <span></span>
+                                </a>
+                                <div class="back"></div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="words">
+                                <div class="logo" title="flyme云服务">
+                                    <script class="template" type="text/template">
+                                        <span>{{=subtitle}}</span>
+                                    </script>
+                                </div>
+                                <script class="template" type="text/template">
+                                    <p>{{=index.intro_1}}</p>
+                                    <a href="https://cloud.flyme.cn/browser/main.jsp" class="i-btn i-btnwhite login">
+                                        <span class="i-btn-wd">{{=index.intro_2}}</span>
+                                        <i class="i-btn-bg"></i>
+                                    </a>
+                                </script>
+                            </div>
+                        </div>
+                        <div class="arrow"><a href="#data"></a></div>
+                    </div>
+
+                    <div class="section data" data-anchor="data">
+                        <div class="content">
+                            <script class="template" type="text/template">
+                                <div class="words">
+                                    <h1>{{=index.data_1}}</h1>
+                                    <p>{{=index.data_2}}</p>
+                                </div>
+                            </script>
+                            <div class="pic"><img src="/images/dot.png" data-url="/images/sec2_pic.png" class="lazy opacity0" alt="高效的云服务"></div>
+                        </div>
+                        <div class="arrow"><a href="#safe"></a></div>
+                    </div>
+
+                    <div class="section begin fp-auto-height" data-anchor="begin">
+                        <div class="arrow back-home"><a href="#intro"></a></div>
+                        <div class="content">
+                            <script class="template" type="text/template">
+                                <div class="words">
+                                    <h1>{{=index.begin_1}}</h1>
+                                    <h2>{{=index.begin_2}}<br>{{=index.begin_3}}</h2>
+                                </div>
+                                <div class="btns">
+                                    <a href="https://cloud.flyme.cn/browser/main.jsp" class="i-btn i-btnbluefull login">
+                                        <span class="i-btn-wd">{{=index.intro_2}}</span>
+                                        <i class="i-btn-bg"></i>
+                                    </a>
+                                    <a href="https://i.flyme.cn/register" class="i-btn i-btnblue regi">
+                                        <span class="i-btn-wd">{{=index.begin_4}}</span>
+                                        <i class="i-btn-bg"></i>
+                                    </a>
+                                </div>
+                            </script>
+                        </div>
+                        <div class="footer" data-anchor="footer">
+                            <div id='flymeFooter' class='footerWrap'>
+                            	<div class='footerInner clearfix'>
+                                    <script class="template" type="text/template">
+                                        <div id="wechatPic"></div>
+                                        <div class='footer-layer1 clearfix'>
+                                            <div class='footer-innerLink clearfix'>
+                                                {{index.foot.forEach(function(name){ }}
+                                                    <a {{ if(name.v == ''){ }} href="javascript:void(0);" id="globalName" class="footer-language" {{ }else{ }} target="_blank" href="{{=name.v}}" {{ } }}>{{=name.k}}</a>
+                                                {{ }) }}
+                                                {{lanArr.forEach(function(name){ }}
+                                                    {{ if(name.k == language){ }}
+                                                        <div href="javascript:void(0);" id="globalName" class="footer-language">
+                                                            <span>{{=name.v}}</span>
+                                                            <div id="globalContainer" class="footer-language-menu">
+                                                                {{lanArr.forEach(function(name){ }}
+                                                                    <a href="javascript:void(0)" {{ if(name.k == language){ }} class="checked" {{ }else{ }} class="ClobalItem" {{ } }} lan="{{=name.k}}">{{=name.v}}</a>
+                                                                {{ }) }}
+                                                            </div>
+                                                        </div>
+                                                    {{ } }}
+                                                {{ }) }}
+                                            </div>
+                                            <div class='footer-service'>
+                                                <% if(htmlWebpackPlugin.options.oversea == '0'){ %>
+                                                    <span class='service-label'>客服热线&nbsp;400-788-3333</span>
+                                                    <a id='service-online' class='service-online' href="javascript:void(0);" title="{{=customer}}">{{=customer}}</a>
+                                                <% }else{ %>
+                                                    <a class='service-label' href="mailto:flyme.service@meizu.com">{{=customer}}: flyme.service@meizu.com</a>
+                                                <% } %>
+                                            </div>
+                                            <div class='footer-outerLink'>
+                                                <% if(htmlWebpackPlugin.options.oversea == '0'){ %>
+                                                    <a class='footer-link footer-sinaMblog' href="http://weibo.com/meizumobile" target="_blank"><i class='i-icon'></i></a>
+                                                    <a class='footer-link footer-tencentMblog' href="http://t.qq.com/meizu_tech" target="_blank"><i class='i-icon'></i></a>
+                                                    <a id='footer-weChat' class='footer-link footer-weChat' href="javascript:void(0);" target="_blank"><i class='i-icon'></i></a>
+                                                    <a class='footer-link footer-qzone' href="http://user.qzone.qq.com/2762957059" target="_blank"><i class='i-icon'></i></a>
+                                                <% }else{ %>
+                                                    <a class="os-footer-link mz-footer-facebook" href="https://www.facebook.com/FlymeGlobal" target="_blank"><i class="mz-i-icon"></i></a>
+                                                    <a class="os-footer-link mz-footer-twitter" href="https://twitter.com/FlymeGlobal" target="_blank"><i class="mz-i-icon"></i></a>
+                                                    <a class="os-footer-link mz-footer-google" href="https://plus.google.com/109293092694281086888" target="_blank"><i class="mz-i-icon"></i></a>
+                                                    <a class="os-footer-link mz-footer-instagram" href="https://www.instagram.com/flymeglobal/" target="_blank"><i class="mz-i-icon"></i></a>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                        <div id='flymeCopyright' class="copyrightWrap clearfix">
+                                            <div class="copyrightInner">
+                                                <span>©{{=year}} Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+                                                <% if(!htmlWebpackPlugin.options.oversea){ %>
+                                                <div class="break"><br></div>
+                                                <a href="http://www.miitbeian.gov.cn/" class='linkAGray' target="_blank">备案号: 粤ICP备13003602号-4</a>
+                                                <div class="break"><br></div>
+                                                <a href="http://www2.res.meizu.com/zh_cn/images/common/icp2.jpg" class='linkAGray' target="_blank">经营许可证编号: 粤B2-20130198</a>
+                                                <a target="_blank" href="http://www2.res.meizu.com/zh_cn/images/common/com_licence.jpg" hidefocus="true" class="linkAGray">营业执照</a>
+                                                <% } %>
+                                            </div>
+                                        </div>
+
+                                    </script>
+
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </div>
+        
+        <!--微信横屏-->
+        <div id="orientLayer" class="mod-orient-layer">
+            <div class="mod-orient-layer__content">
+                <i class="icon mod-orient-layer__icon-orient"></i>
+                <script class="template" type="text/template">
+                    <div class="mod-orient-layer__desc">{{orient}}</div>
+                </script>
+            </div>
+        </div>
+        <script src="/js/external/jquery-1.7.1.min.js"></script>
+        <script src="/js/external/ejs-pro.js"></script>
+        <script src="/js/external/utils.js"></script>
+        <script>
+        if(ismobile) {
+            document.write('<script type="text/javascript" src="/js/external/swiper-3.3.1.min.js" ><\/script>');
+        }else{
+            document.write('<script type="text/javascript" src="/js/external/jquery.fullPage.js" ><\/script>');
+        }
+        </script>
+    </body>
+</html>

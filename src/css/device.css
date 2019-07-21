@@ -1,0 +1,157 @@
+.device-switch {
+    width: 180px;
+    cursor: pointer;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    margin-left: -80px;
+    text-align:center;
+    font-size:13px;
+    z-index:11;
+    padding:1px 0;
+}
+
+.device-drop-menu {
+    width: 278px;
+    height: 360px;
+    position: absolute;
+    top: 146px;
+    left: 50%;
+    margin: 0 0 0 -139px;
+    -webkit-transform: translateZ(-23px);
+    -moz-transform: translateZ(-23px);
+    -ms-transform: translateZ(-23px);
+    transform: translateZ(-23px);
+    z-index: 10;
+    display: none;
+    background: #fff;
+    border: 1px #e5e5e5 solid;
+    border-radius: 4px;
+}
+
+.device-list{
+    height: 64px;
+    border-bottom: #efefef 1px solid;
+}
+.device-list .phone {
+    float: left;
+    width: 24px;
+    height: 34px;
+    background: url(/images/sync_common.png) no-repeat -401px 1px;
+    margin: 16px 9px 0 2px;
+}
+.device-list .device-info {
+    float: left;
+    margin-top: 10px;
+}
+.device-list .device-info input:hover {
+    background: rgb(232, 242, 254);
+}
+.device-list .status {
+    font-size: 12px;
+    width: 36px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    margin: 0 0 0 32px;
+    float: none;
+}
+.device-list .status.offline-btn {
+    background: #cdcdcd;
+}
+.device-list .status.online-btn {
+    background: #1cc136;
+}
+.device-list .device-handle {
+    float: right;
+    line-height: 64px;
+}
+.device-node .J-device-name{
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    color: #535353;
+    width: 160px;
+    border:0;
+}
+.device-node .J-device-handle{
+    color:#32A5E7;
+    font-size:12px;
+}
+.device-list .device-desc {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+.device-list .device-desc > span {
+    display: inline-block;
+}
+.device-desc .device-model {
+    height: 13px;
+    line-height: 13px;
+    margin-right: 7px;
+    width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.device-desc .device-sn {
+    width: 140px;
+    overflow: hidden;
+    height: 13px;
+    line-height: 13px;
+    text-align: center;
+}
+.device-node .ant-dropdown-menu-item{
+    padding:0 15px;
+}
+.device-node .ant-dropdown-menu-item:hover{
+    background:none;
+}
+.device-node .ant-dropdown-menu-item-active .device-handle{
+    visibility: visible;
+}
+.device-node .ant-dropdown-menu-item-selected, .device-node .ant-dropdown-menu-submenu-title-selected, .device-node .ant-dropdown-menu-item-selected > a, .device-node .ant-dropdown-menu-submenu-title-selected > a{
+    color:rgba(0, 0, 0, 0.65);
+    background:none;
+}
+.device-node .ant-dropdown{
+    width:400px;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+.device-node .ant-dropdown-menu{
+    max-height:192px;
+    overflow:auto;
+    box-shadow:none;
+}
+.device-switch .tip{
+    display:inline-block;
+    vertical-align: top;
+    font-size:14px;
+}
+.device-switch .arrow{
+    display:inline-block;
+    vertical-align: top;
+    margin:16px 0 0 10px;
+    vertical-align: top;
+}
+.device-switch .phone{
+    display:inline-block;
+    width:15px;
+    height:24px;
+    background:Url(/images/sync_common.png) no-repeat -235px -6px;
+    margin:7px 8px 0 0;
+    vertical-align: top;
+}
+.dialog-pwd-tip{
+    color:#f00;
+    padding:4px 0 0;
+}

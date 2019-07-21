@@ -1,0 +1,97 @@
+.clear-recycle {
+    padding: 0 15px
+}
+
+.clear-recycle > .content > .clear-tip {
+    font-size: 16px;
+    color: #999;
+    padding-left: 9px
+}
+
+.clear-recycle .icon-wrap {
+    margin: 27px auto 0;
+}
+
+.clear-recycle .icon-wrap > li {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    cursor: pointer
+}
+
+.clear-recycle .icon-wrap > li > i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: url(/images/checkbox.png) no-repeat 0 -38px;
+    left: 1px;
+    top: 26px
+}
+
+.clear-recycle .icon-wrap > li.checked > i {
+    background: url(/images/checkbox.png) no-repeat -69px -38px
+}
+
+.clear-recycle .icon-wrap img {
+    width: 44px;
+    height: 44px;
+    display: block;
+    margin: auto
+}
+
+.clear-recycle .icon-wrap p {
+    text-align: center;
+    margin: 8px 0 0;
+    color: #4a4a4a;
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px
+}
+
+.clear-recycle .pass-wrap {
+    width: 350px;
+    margin: 39px auto 0
+}
+
+.clear-recycle .pass-wrap input {
+    width: 350px;
+    font-size: 14px;
+    color: #999;
+}
+.clear-loading .clear-tip{
+    text-align:center;
+}
+.clear-loading .loading-wrap {
+    width: 280px;
+    height: 3px;
+    background: rgba(0,0,0,.1);
+    position: relative;
+    margin: 60px auto 0;
+    border-radius: 999px;
+    overflow: hidden
+}
+.clear-loading .loading-bar {
+    position: absolute;
+    height: 100%;
+    width:0%;
+    top: 0;
+    left: 0;
+    background: #1d87e4;
+    border-radius: 999px;
+}
+.clear-loading .loading-bar.trans01{
+    -webkit-transition:all linear 0.1s;
+    -moz-transition:all linear 0.1s;
+    -ms-transition:all linear 0.1s;
+    transition:all linear 0.1s;
+}
+.clear-loading .loading-bar.trans05{
+    -webkit-transition:all linear 0.5s;
+    -moz-transition:all linear 0.5s;
+    -ms-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+.clear-loading .dialog .content{
+    padding:60px 25px !important;
+}

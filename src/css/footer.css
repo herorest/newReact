@@ -1,0 +1,16 @@
+/*footer*/
+.footer {
+    width: 1000px;
+    line-height: 52px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto 0 -500px;
+    color: #fff;
+    font-size: 12px;
+}
+.footer a {
+    color: #fff
+}

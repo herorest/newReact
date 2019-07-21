@@ -1,0 +1,158 @@
+.sidebar-wrap {
+    width: 100px;
+    height: 100%;
+    float: left;
+}
+.sidebar-header {
+    width: 100%;
+    height: 68px;
+    background: #0e2c3d;
+    padding: 18px 0 0 0;
+}
+.sidebar-content {
+    width: 100%;
+    height: 702px;
+    position: relative;
+    background: -webkit-linear-gradient(top, #0d293c, #0d2239);
+    background: -moz-linear-gradient(top, #0d293c, #0d2239);
+    background: -ms-linear-gradient(top, #0d293c 0%,#0d2239 100%);
+    background: -o-linear-gradient(top, #0d293c, #0d2239);
+    background: linear-gradient(top, #0d293c, #0d2239);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#0d293c,endcolorstr=#0d2239,gradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#0d293c,endcolorstr=#0d2239,gradientType=0);
+    border-bottom-left-radius: 5px;
+}
+.sidebar-header > .icon-wrap {
+    width: 64%;
+    height: 32px;
+    margin: 0 auto;
+    display: block;
+}
+.sidebar-header > .icon-wrap > .icon-logo {
+    stroke: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+}
+.side-list {
+    padding-top: 30px;
+    height: 100%;
+}
+.side-list > li {
+    height: 32px;
+    position: relative;
+}
+.side-list > li:hover > span {
+    display: block;
+    transform: translateX(15px);
+    visibility: visible;
+}
+.side-list > li > span {
+    position: absolute;
+    width: 74px;
+    height: 32px;
+    line-height: 32px;
+    color: #333;
+    background: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    top: 0;
+    left: 65px;
+    z-index: 100;
+    transition: transform 0.1s ease-in-out;
+    visibility: hidden;
+}
+.side-list > li > span:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fafafa;
+    left: -3px;
+    top: 50%;
+    transform: rotate(45deg);
+    margin-top: -3px;
+}
+.side-list > li.recycle span {
+    left: 28px!important;
+}
+.side-list > li:hover {
+    cursor: pointer;
+}
+.side-list .sms, .side-list .note, .side-list .photo, .side-list .find {
+    margin-top: 30px;
+}
+.side-list .recycle {
+    position: absolute;
+    left: 50%;
+    margin-left: -17px;
+    bottom: 36px;
+}
+.side-list > li > a {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    width: 34px;
+}
+.side-list .contact a {
+    background: url(../images/sync_common.png) no-repeat -121px -108px;
+}
+.side-list .contact:hover a {
+    background: url(../images/sync_common.png) no-repeat -188px -108px;
+}
+.side-list .contact.active a, .side-list .contact.active:hover a {
+    background: url(../images/sync_common.png) no-repeat -255px -108px;
+}
+.side-list .sms a {
+    background: url(../images/sync_common.png) no-repeat -321px -108px;
+}
+.side-list .sms:hover a {
+    background: url(../images/sync_common.png) no-repeat -388px -108px;
+}
+.side-list .sms.active a, .side-list .sms.active:hover a {
+    background: url(../images/sync_common.png) no-repeat -455px -108px;
+}
+.side-list .note a {
+    background: url(../images/sync_common.png) no-repeat -522px -108px;
+}
+.side-list .note:hover a {
+    background: url(../images/sync_common.png) no-repeat -589px -108px;
+}
+.side-list .note.active a, .side-list .note.active:hover a {
+    background: url(../images/sync_common.png) no-repeat -655px -108px;
+}
+.side-list .photo a {
+    background: url(../images/sync_common.png) no-repeat -723px -108px;
+}
+.side-list .photo:hover a {
+    background: url(../images/sync_common.png) no-repeat -790px -108px;
+}
+.side-list .photo.active a, .side-list .photo.active:hover a {
+    background: url(../images/sync_common.png) no-repeat -857px -108px;
+}
+.side-list .find a {
+    background: url(../images/sync_common.png) no-repeat -924px -108px;
+}
+.side-list .find:hover a {
+    background: url(../images/sync_common.png) no-repeat -991px -108px;
+}
+.side-list .find.active a, .side-list .find.active:hover a {
+    background: url(../images/sync_common.png) no-repeat -1058px -108px;
+}
+.side-list .recycle a {
+    background: url(../images/sync_common.png) no-repeat -1126px -108px;
+}
+.side-list .recycle:hover a {
+    background: url(../images/sync_common.png) no-repeat -1193px -108px;
+}
+.side-list .recycle.active a, .side-list .recycle.active:hover a {
+    background: url(../images/sync_common.png) no-repeat -1260px -108px;
+}
+@media all and (max-width:1200px){
+    .sidebar-wrap{
+        width:80px;
+    }
+}
+@media all and (max-height:650px){
+
+}

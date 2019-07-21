@@ -1,0 +1,141 @@
+/* header */
+.header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-transform:translate(0,0);
+    -moz-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+    transform:translate(0,0);
+    height: 74px;
+    background: 0 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.header .logo {
+    width: 162px;
+    height: 38px;
+    display: block;
+    float: left;
+    margin:17px 30px 0 20px;
+}
+.header .logo .icon-logo,.header .content .logoicon .icon-logo,.intro .logo .icon-logo{
+    stroke: #ffffff;
+    fill: #ffffff;
+}
+.header .logom {
+    display: none;
+}
+.header .register {
+    float: right;
+    margin: 15px 100px 0 0
+}
+.header .links {
+    float: left;
+    margin: 18px 0 0 100px;
+    font-size: 16px;
+    position: relative
+}
+.header .notice {
+    float: right;
+    margin: 18px 40px 0 0;
+    font-size: 16px;
+    position: relative
+}
+.header .links .angle, .header .notice .angle {
+    position: absolute;
+    background: url(/images/elements.png) no-repeat scroll -136px 0 transparent;
+    right: -10px;
+    bottom: 0;
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    overflow: hidden
+}
+.header .links a, .header .notice a {
+    color: #333
+}
+.header .menu {
+    width: 30px;
+    height: 30px;
+    background: url(/images/common.png) no-repeat 6px -259px transparent;
+    float: right;
+    display: block;
+    margin: 15px 20px 0 0;
+}
+.header-main .menu{
+    display:none;
+}
+.header-main .username{
+    cursor: pointer;
+}
+.header .content {
+    width: 1240px;
+    margin: 0 auto;
+    color: #fff;
+    height: 94px;
+}
+.header .content .logoicon {
+    float: left;
+    margin: 28px 0 0 3px;
+    width:100px;
+    height:38px;
+}
+.header .content ul {
+    text-align: right;
+    font-size: 0;
+    line-height: 94px;
+}
+.header .content ul li {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 42px;
+}
+.header .content ul li a {
+    color: #fff;
+    opacity: 0.3;
+}
+.header .content ul li a.active {
+    opacity: 1;
+}
+.header .menu ,.header .back{
+    display:none;
+}
+
+
+/*用户信息*/
+.users {
+    height: 46px;
+    float: right;
+    margin: 10px 25px 0 0;
+    font-size: 0;
+    position: relative;
+}
+.users .pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.users a, .users span {
+    height: 46px;
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+}
+.users span{
+    height: 40px;
+    line-height: 40px;
+    margin-right:10px;
+}
+.users .arrow{
+    margin-top:19px;
+}
